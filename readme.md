@@ -11,7 +11,7 @@ This "bridge" app sets up a WebSocket server that receives and broadcasts messag
 
 _Developed and tested on MacOS, might need some work for Windows._
 
-## Install
+## Install  
 
 1. Move `be.jeroenvdb.streamdeckgooglemeet.json` to the [appropriate location](https://developer.chrome.com/apps/nativeMessaging#native-messaging-host-location).
 1. Make sure `streamdeck-googlemeet-extension-bridge.js` is executable: `chmod +x streamdeck-googlemeet-extension-bridge.js` 
