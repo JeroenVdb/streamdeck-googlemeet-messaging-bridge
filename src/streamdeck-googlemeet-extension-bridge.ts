@@ -9,35 +9,20 @@ process.title = 'googlemeetbridge'
 
 import { Server } from 'ws';
 
+const sockets: WebSocket[] = [];
 const webSocketServer = new Server({ port: 1987 });
-
-var meetSockets: WebSocket[] = [];
-var pluginSockets: WebSocket[] = [];
 
 webSocketServer.on('connection', function connection(ws) {
 	ws.on('message', function incoming(message: string) {
 		var msg: identifyMessage | actionMessage | muteStateMessage = JSON.parse(message);
 
 		if (msg.type === 'identify') {
-			if (msg.value === 'iamameet') {
-				// @ts-ignore https://github.com/websockets/ws/issues/1583
-				meetSockets.push(ws);
-			} else if (msg.value === 'iamtheplugin') {
-				// @ts-ignore https://github.com/websockets/ws/issues/1583
-				pluginSockets.push(ws);
-			}
-		} else if (msg.type === 'action') {
-			if (meetSockets.length) {
-				meetSockets.forEach((meetSocket) => {
-					meetSocket.send(message);
-				});
-			}
-		} else if (msg.type === 'muteState') {
-			if (pluginSockets.length) {
-				pluginSockets.forEach((meetSocket) => {
-					meetSocket.send(message);
-				});
-			}
+			// @ts-ignore
+			sockets.push(ws);
+		} else {
+			sockets.forEach((socket) => {
+				socket.send(message);
+			});
 		}
 	});
 });

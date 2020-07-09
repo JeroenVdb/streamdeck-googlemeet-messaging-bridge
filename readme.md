@@ -7,6 +7,8 @@ You will also need to install
 - Stream Deck plugin: https://github.com/JeroenVdb/streamdeck-googlemeet
 - the Chrome Extension: https://github.com/JeroenVdb/streamdeck-googlemeet-extension
 
+This "bridge" app sets up a WebSocket server that receives and broadcasts messages from and to the Stream Deck plugin and accompanying extension.
+
 _Developed and tested on MacOS, might need some work for Windows._
 
 ## Install
