@@ -1,6 +1,11 @@
 # Google Meet Extension Bridge
 
-This is 1 part of the Google Meet Stream Deck plugin. 
+This is 1 part of the Google Meet Stream Deck plugin.
+
+You will also need to install
+
+- Stream Deck plugin: https://github.com/JeroenVdb/streamdeck-googlemeet
+- the Chrome Extension: https://github.com/JeroenVdb/streamdeck-googlemeet-extension
 
 _Developed and tested on MacOS, might need some work for Windows._
 
