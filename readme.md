@@ -2,7 +2,7 @@
 
 This is 1 part of the Google Meet Stream Deck plugin. 
 
-_Developed and tested on MacOS, might need soms tweeks for Windows._
+_Developed and tested on MacOS, might need some work for Windows._
 
 ## Install
 
