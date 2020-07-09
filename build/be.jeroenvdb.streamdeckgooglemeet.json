@@ -1,0 +1,9 @@
+{
+  "name": "be.jeroenvdb.streamdeckgooglemeet",
+  "description": "Stream Deck Google Meet Bridge",
+  "path": "/Users/jvandenberghe/Projects/streamdeck-googlemeet-messaging-bridge/build/streamdeck-googlemeet-extension-bridge.js",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://ikcpccnnkdgddigmfcoehnlpfbjmmjnn/"
+  ]
+}
