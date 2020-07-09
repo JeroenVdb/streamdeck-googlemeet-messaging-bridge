@@ -14,8 +14,6 @@ let clients: WebSocket[] = [];
 
 webSocketServer.on('connection', function connection(ws) {
 	ws.on('message', function handleIncomingMessages(message: string) {
-		console.log(`Received message: ${message}`);
-
 		try {
 			const msg: any = JSON.parse(message);
 
@@ -33,8 +31,6 @@ webSocketServer.on('connection', function connection(ws) {
 });
 
 function broadcast(message: string) {
-	console.log(`Send message to ${clients.length} clients: ${message}`);
-
 	clients.forEach((client) => {
 		client.send(message);
 	});

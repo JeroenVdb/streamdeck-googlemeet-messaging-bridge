@@ -7,7 +7,6 @@ const webSocketServer = new ws_1.Server({ port: 1987 });
 let clients = [];
 webSocketServer.on('connection', function connection(ws) {
     ws.on('message', function handleIncomingMessages(message) {
-        console.log(`Received message: ${message}`);
         try {
             const msg = JSON.parse(message);
             if (msg.type === 'identify') {
@@ -24,7 +23,6 @@ webSocketServer.on('connection', function connection(ws) {
     });
 });
 function broadcast(message) {
-    console.log(`Send message to ${clients.length} clients: ${message}`);
     clients.forEach((client) => {
         client.send(message);
     });
