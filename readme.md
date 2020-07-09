@@ -22,3 +22,9 @@ After you restart Chrome you should see a process with the name "googlemeetbridg
 ```commandline
 ps aux | grep 'googlemeetbridge'
 ```
+
+As an alternative you can also run this yourself in some other way.
+
+```commandline
+./build/streamdeck-googlemeet-extension-bridge.js
+```
