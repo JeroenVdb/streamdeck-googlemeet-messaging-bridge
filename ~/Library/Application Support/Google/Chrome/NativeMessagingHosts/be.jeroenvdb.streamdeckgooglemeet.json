@@ -1,9 +1,0 @@
-{
-  "name": "be.jeroenvdb.streamdeckgooglemeet",
-  "description": "Stream Deck Google Meet controller",
-  "path": "/Users/jvandenberghe/Projects/streamdeck-googlemeet-messaging-bridge/build/run.sh",
-  "type": "stdio",
-  "allowed_origins": [
-    "chrome-extension://ikcpccnnkdgddigmfcoehnlpfbjmmjnn/"
-  ]
-}
