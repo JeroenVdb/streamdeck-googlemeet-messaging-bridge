@@ -3,19 +3,28 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 process.title = 'googlemeetbridge';
 const ws_1 = require("ws");
-const sockets = [];
+const clients = [];
 const webSocketServer = new ws_1.Server({ port: 1987 });
 webSocketServer.on('connection', function connection(ws) {
-    ws.on('message', function incoming(message) {
-        var msg = JSON.parse(message);
+    ws.on('message', handleIncomingMessages);
+});
+function handleIncomingMessages(message) {
+    try {
+        const msg = JSON.parse(message);
         if (msg.type === 'identify') {
-            sockets.push(ws);
+            clients.push(ws);
         }
         else {
-            sockets.forEach((socket) => {
-                socket.send(message);
-            });
+            broadcast(message);
         }
+    }
+    catch (e) {
+        broadcast(message);
+    }
+}
+function broadcast(message) {
+    clients.forEach((client) => {
+        client.send(message);
     });
-});
+}
 //# sourceMappingURL=streamdeck-googlemeet-extension-bridge.js.map
