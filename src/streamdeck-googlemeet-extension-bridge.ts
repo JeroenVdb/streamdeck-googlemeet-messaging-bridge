@@ -1,7 +1,10 @@
 #!/Users/jvandenberghe/.nvm/versions/node/v12.10.0/bin/node
 
-// Might be good to use an explicit path to node on the shebang line
-// in case it isn't in PATH when launched by Chrome
+// Might be necessary to use an explicit path to node on the shebang line
+// in case "node" isn't in PATH when launched by Chrome
+// For example:
+// --> #!/Users/jvandenberghe/.nvm/versions/node/v12.10.0/bin/node
+//
 // Thanks https://github.com/simov/native-messaging
 
 process.title = 'googlemeetbridge';
