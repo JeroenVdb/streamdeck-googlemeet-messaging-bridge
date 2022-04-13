@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "My personal NodeJS-TypeScript starter",
   "scripts": {
+    "run": "node streamdeck-googlemeet-extension-bridge.js",
     "test": "mocha --require ts-node/register test/**/*.ts"
   },
   "author": "Jeroen Van den Berghe",
